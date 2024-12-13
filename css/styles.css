@@ -1,0 +1,932 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* UTILITIES */
+
+--primary-color
+
+:root {
+    --main-color: #1075bc;
+    --softwhite: #F4f7f6;
+    --calmgrey: #E0E4e3;
+    --navy: #0A4A6E;
+    --mint: #B0E0E6;
+
+
+}
+
+body{
+    overflow: auto;
+    font-family: "Quicksand", serif;
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+/* BASE Navbar*/
+
+
+
+
+
+
+
+.navbar {
+    height: 3.3rem;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, backdrop-filer 0.3s ease;
+}
+
+
+
+/* NAV CONTAINER */
+.navbar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Logo and Heading Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fa-solid {
+    font-size: 2rem;
+    color: #1075BC;
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: rgba(139, 136, 149, 0.9);
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Menu Items */
+.main-menu-items {
+    display: flex;
+    align-items: center;
+}
+
+.main-menu-list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.main-menu-list li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(139, 136, 149, 0.9);
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.3rem;
+}
+
+.main-menu-list li a:hover {
+    background-color: #1075BC;
+    color: #fff;
+}
+
+
+
+
+/* DROP DOWN NAV! OPTIONAL ! */
+
+/* Dropdown Container Styling */
+.dropdown-item {
+    position: relative; /* Important for dropdown positioning */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position below the parent link */
+    left: 0;
+    list-style: none;
+    background-color: #fff;
+    padding: 0.5rem 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+     
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(139, 136, 149, 0.9);
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #1075BC;
+    color: #fff;
+}
+
+/* Show Dropdown on Hover */
+.dropdown-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Align dropdown menus slightly */
+.main-menu-list .dropdown-menu {
+    left: 0; /* Align with the parent link */
+}
+
+
+
+
+.fa-solid  {
+    font-size: 2.5rem;
+    color: #1075BC;
+    padding-top: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    
+
+}
+
+
+
+.showcase-container {
+   background-color:  rgba(139, 136, 149, .9);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.showcase-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+
+
+
+.showcase-flex ul {
+    flex: 1 1 30%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.showcase-flex ul p {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #fff;
+    padding-bottom: .7rem;
+}
+
+
+.btn {
+    font-weight: 900;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #1075BC;
+    align-items: center;
+    padding-left: 1.4rem;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color:#1075BC;
+    border-radius: .3rem;
+    font-weight: 900;
+}
+
+
+
+
+.welcome h2 {
+    margin-top: 4rem;
+    font-size: 30px;
+}
+
+
+
+
+/* POSSIBLE UTILITY CLASS */
+.welcome-main-grey {
+  color: #777777;
+  font-weight: 200;
+}
+
+
+
+
+/* CHAT - GPT CODE!!! MAY KEEP */ 
+
+
+
+.background-image-container{
+    width: 100%;
+    height: 60vh;
+}
+
+.background-image {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: top-center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:inherit;
+    opacity: 0.8;
+}
+
+
+
+
+.showcase-flex i {
+    font-size: 2rem;
+    color: #1075BC;
+    margin-bottom: 1rem;
+}
+
+.h2-head {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.h2-sub{
+    font-size: 1rem;
+    color: #fff;
+    margin: 0.5rem 0;
+
+}
+
+
+
+.showcase-flex .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #1075BC;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.showcase-flex .btn:hover{
+    background-color: #005a8c;
+
+}
+
+.showcase-flex ul:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* General container */
+.welcome {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome-container {
+    max-width: 800px; 
+    width: 100%;
+    text-align: center; 
+}
+
+/* Heading styles */
+.welcome-main {
+    font-size: 2rem; 
+    font-weight: bold;
+    margin-bottom: 0.5rem; 
+    color: #1075BC; 
+}
+
+.welcome-main-grey {
+    font-size: 1.2rem; 
+    color: #8b8895; 
+    margin-bottom: 1.5rem; 
+}
+
+/* Paragraph layout */
+.content-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+
+.content-flex p {
+    font-size: 1rem;
+    line-height: 1.6; 
+    color: #555; 
+    text-align: justify; 
+}
+
+
+/* Tooth-blank styling */
+.tooth-blank {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; 
+    margin-top: 2rem; 
+}
+
+.tooth-blank::before,
+.tooth-blank::after {
+    content: ""; 
+    display: block;
+    width: 40%; 
+    height: 1px; 
+    background-color: #d3d3d3; 
+}
+
+/* Media query */
+@media (max-width: 768px) {
+    .welcome-container {
+        padding: 1rem; 
+    }
+
+    .welcome-main {
+        font-size: 1.8rem; 
+    }
+
+    .welcome-main-grey {
+        font-size: 1rem; 
+    }
+
+    .content-flex p {
+        font-size: 0.9rem; 
+    }
+}
+
+
+
+/* Container styling */
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 900px; /* Constrain the overall width of the section */
+    margin: 0 auto;
+}
+
+/* Grid layout for the boxes */
+.grid-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* Smaller spacing between boxes */
+}
+
+/* Target the first .box and make the .grid-icons larger */
+.grid-boxes .box:first-child .grid-icons {
+    width: 80px; /* Double the size */
+    height: 80px;
+}
+
+
+
+
+/* Box styling */
+.box {
+    background-color: rgba(139, 136, 149, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Enables flexible alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+
+
+
+
+/* Styling for grid icons */
+.grid-icons {
+    width: 40px; /* Uniform icon size */
+    height: 40px;
+    display: block;
+    margin: 0 auto; /* Centers the icon horizontally */
+    object-fit: contain; /* Ensures SVGs fit properly */
+}
+
+
+/* Headings styling */
+.box-main {
+    font-size: 1.2em; /* Adjust for visibility */
+    margin: 10px 0 5px; /* Spacing around the heading */
+}
+
+.box h3 {
+    font-size: 0.9em; /* Smaller subheading font size */
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Thin line under each box */
+.tooth-blank::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #d3d3d3;
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.who {
+    display: flex;
+    height: 800px;
+    background-color: rgba(139, 136, 149, 0.9); /* Background color for the entire container */
+    color: white;
+}
+
+.dentist-who {
+    width: 50%; /* Ensures the image takes up half the container */
+    height: 100%; /* Ensures the image spans the full height of the container */
+    object-fit: cover; /* Keeps the image's aspect ratio and fills its area */
+}
+
+.txt-container {
+    width: 50%; /* Ensures the text takes up half the container */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the text content */
+}
+
+.linebar {
+    height: 3px;
+    background-color: white;
+    width: 50%;
+    margin: 10px 0;
+}
+
+.aside-who {
+    line-height: 1.6; /* Improves readability */
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: rgba(139, 136, 149, 1);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+
+.awards-contain{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+
+
+
+.award-item {
+    display: flex;
+    flex: 0 0 33.3333%;
+    align-items: center;
+    text-align: center;
+    
+    
+     /* Optional: Keeps items compact */
+}
+
+.award-item i {
+    font-size: 3.5rem;
+    color: #007bff; /* Optional icon color */
+    margin-bottom: 10px;
+    margin-right: 15px; /* Adds space between icon and text */
+}
+
+.awards-txt {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Container styling */
+.reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.reviews-container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color:rgba(181, 209, 245);
+}
+
+/* Header styling */
+.appreciate {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Italic paragraph */
+.reviews p {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Author and location */
+.reviews h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.reviews h4 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+.linebar-2 {
+    height: 3px;
+    background-color: white;
+    
+    
+}
+
+
+
+
+
+/* General Container Styling */
+.map-hours-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for elevation */
+}
+
+/* Inner container for map and boxes */
+.map-hours {
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+    align-items: stretch;
+}
+
+/* Styling for the text boxes */
+.map-boxes {
+    width: 40%;
+    background-color: #1075BC;
+    padding: 2rem;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+/* Individual hours boxes */
+.hours-box {
+    background-color: #ffffff22; /* Transparent white for contrast */
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Add subtle shadow */
+    gap: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hours-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons styling */
+.hours-box i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #FFD700; /* Highlight icons with a gold color */
+}
+
+/* Headings styling */
+.hours h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Paragraphs and lists */
+.hours h4, .hours li {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0.3rem 0;
+    line-height: 1.6;
+    color: #ffffffdd; /* Slightly lighter white */
+}
+
+.hours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hours li {
+    padding-left: 1rem;
+    position: relative;
+    
+}
+
+.hours li::before {
+    content: "•";
+    color: #FFD700; /* Gold bullet points */
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+}
+
+/* Styling for the iframe */
+iframe {
+    width: 60%;
+    height: auto;
+    border: 0;
+    border-left: 5px solid #1075BC;
+}
+
+
+
+
+
+
+
+/* ABOUT PAGE!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */ 
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto; /* Centers the container */
+    width: 90%; /* Adds padding around the sides */
+    max-width: 1200px; /* Limits the maximum width */
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+    margin-right: 20px;
+    max-width: 75%; /* Ensures text content doesn't span too wide */
+    text-align: center; /* Centers the text content */
+}
+
+.about-image {
+    float: right;
+    flex: 1; /* Adjusts the flex basis */
+    max-width: 280px; /* Slightly smaller max width for better alignment */
+    height: auto;
+    margin-left: 20px;
+    margin-right: 40px; /* Adds space between image and edge of the page */
+}
+
+.about-us .grey-head-about,
+.about-us .grey-head-about-2,
+.about-us .grey-head-p-4 {
+    color: #4f5154;
+    font-size: 36px;
+    display: inline;
+    margin-bottom: 15px;
+}
+
+.about-us .grey-head-about {
+    color: #4f5154;
+    font-family: Lato, sans-serif;
+    font-size: 36px;
+    line-height: 1.1rem;
+    display: inline;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.about-us ul.read {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.about-us ul.read li {
+    margin-bottom: 5px;
+}
+
+.about-us .about-p {
+    text-align: center; /* Centers paragraph text */
+    margin: 0 auto 15px auto; /* Centers and ensures even spacing */
+    color: #555;
+    max-width: 700px; /* Limits paragraph width for cleaner lines */
+}
+
+ .patients-head {
+    color: #1075BC;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.about-us .schedule {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES!!!! */
+@media (max-width: 768px) {
+    .showcase-flex {
+      flex-direction: column; /* Stack boxes vertically on small screens */
+      gap: 1rem;
+    }
+
+    .welcome-container {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+
+    .welcome-main {
+        font-size: 1.8rem; /* Slightly smaller heading on smaller screens */
+    }
+
+    .welcome-main-grey {
+        font-size: 1rem; /* Adjust subheading size */
+    }
+
+    .content-flex p {
+        font-size: 0.9rem; /* Reduce paragraph font size for smaller screens */
+    }
+
+  }
+
+  
+
+  @media (max-width: 768px) {
+    .background-image {
+        height: 100%; /* Reduce height for smaller screens */
+    }
+
+  }
